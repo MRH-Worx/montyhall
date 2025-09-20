@@ -7,21 +7,20 @@
 determine_winner(final.pick, game)
 }
 \arguments{
-\item{final.pick}{Intiger 1, 2, or 3. The integer represents the contestant's final door choice.}
+\item{final.pick}{Integer 1, 2, or 3. The integer represents the contestant's final door choice.}
 
-\item{game}{A character of length 3 with two "goat" and one "car".}
+\item{game}{Character vector of length 3 with two "goat" and one "car".}
 }
 \value{
-A string: "WIN", if the contestant won. A stringg "LOSE", if the contestant lost.
+A string: "WIN", if the contestant won. A string "LOSE", if the contestant lost.
 }
 \description{
 Check if the contestant's final door choice is the winning car door.
 }
 \examples{
-g <- create_game()
-p <- select_door()
-open_goat_door(g, p)
-change_door <- (stay = TRUE, opened.door = 0, a.pick = p)
-change_door <- (stay = FALSE, opened.door = 0, a.pick = p)
-determine_winner(f, g)
+  g <- create_game()
+  p <- select_door()
+  opened.door <- open_goat_door(g, p)
+  final.pick <- change_door(stay = TRUE, opened.door= opened.door, a.pick = p )
+  determine_winner(final.pick, g)
 }
