@@ -2,27 +2,23 @@
 % Please edit documentation in R/monty-hall-pkg.r
 \name{select_door}
 \alias{select_door}
-\title{\if{html}{\out{<div class="sourceCode">}}\preformatted{Select a random door.
-}\if{html}{\out{</div>}}}
+\title{Select a random door.}
 \usage{
 select_door()
 }
 \value{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{The function returns an integer 1, 2, or 3. The integer
+The function returns an integer 1, 2, or 3. The integer
 represents the door that was randomly selected as the contestant's
-first choice. 
-}\if{html}{\out{</div>}}
+first choice.
 }
 \description{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{Randomly selects one of three doors as the contestant's initial choice. 
-}\if{html}{\out{</div>}}
+Randomly selects one of three doors as the contestant's initial choice.
 }
 \details{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{This function simulates the contestant's first choice in the
-Monty Hall problem,	where they choose one of three doors. The 
-function chooses door one, two, or three at random. 
-}\if{html}{\out{</div>}}
+This function simulates the contestant's first choice in the
+Monty Hall problem,	where they choose one of three doors. The
+function chooses door one, two, or three at random.
 }
 \examples{
-	select_door()
+  select_door()
 }
