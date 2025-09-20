@@ -8,7 +8,7 @@
 select_door()
 }
 \value{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{The function returns an integer of either 1, 2, or 3. The integer
+\if{html}{\out{<div class="sourceCode">}}\preformatted{The function returns an integer 1, 2, or 3. The integer
 represents the door that was randomly selected as the contestant's
 first choice. 
 }\if{html}{\out{</div>}}
