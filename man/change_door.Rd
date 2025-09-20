@@ -7,28 +7,27 @@
 change_door(stay = T, opened.door, a.pick)
 }
 \arguments{
-\item{stay}{Logic Operator. If TRUE, the contestant keeps their initial choice.}
+\item{stay}{Logical. If TRUE, the contestant keeps their initial choice.}
 
-\item{opened.door}{Intiger. Intiger 1, 2, or 3. Represents the goat door opened by the host.}
+\item{opened.door}{Integer 1, 2, or 3. Represents the goat door opened by the host.}
 
-\item{a.pick}{Intiger 1, 2, or 3. Represents the contestant's initial door choice.}
+\item{a.pick}{Integer 1, 2, or 3. Represents the contestant's initial door choice.}
 }
 \value{
-The function returns an integer 1, 2, or 3. This integer
-represents the contestant's final door choice.
+Integer 1, 2, or 3. This represents the contestant's final door choice.
 }
 \description{
 Updates the contestant's choice depending on whether to stay with
 their initial selection or switch to the other door.
 }
 \details{
-If "stay = TRUE", the contestant remains with their initial selection
-If "stay = FALSE", the contestant will switch doors to the only remaining door.
+If \code{stay = TRUE}, the contestant remains with their initial selection.
+If \code{stay = FALSE}, the contestant will switch doors to the only remaining door.
 }
 \examples{
-g <- create_game()
-p <- select_door()
-open_goat_door(g, p)
-change_door <- (stay = TRUE, opened.door = 0, a.pick = p)
-change_door <- (stay = FALSE, opened.door = 0, a.pick = p)
+  g <- create_game()
+  p <- select_door()
+  opened.door <- open_goat_door(g, p)
+  change_door(stay = TRUE, opened.door = opened.door, a.pick = p)
+  change_door(stay = FALSE, opened.door= opened.door, a.pick = p)
 }
