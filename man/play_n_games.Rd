@@ -7,15 +7,15 @@
 play_n_games(n = 100)
 }
 \arguments{
-\item{n.}{Integer represeenting the number of games played.}
+\item{n}{Integer. Represents the number of games played.}
 }
 \value{
 A data frame with the results of all of the simulated games with strategy ("stay" or "switch")
-and outcome ("WIN" or "LOSE") rows.
+and outcome ("WIN" or "LOSE").
 }
 \description{
-This simulates multiple rounds of the Monty Hall Problem and provides a summary of the results.
+This simulates multiple rounds of the Monty Hall Problem and summarizes the results.
 }
 \examples{
-play_n_games()
+  play_n_games()
 }
