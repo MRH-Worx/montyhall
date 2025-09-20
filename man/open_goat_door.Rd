@@ -6,6 +6,11 @@
 \usage{
 open_goat_door(game, a.pick)
 }
+\arguments{
+\item{game}{Character vector length of 3, with two "goat" and one "car"}
+
+\item{a.pick}{Integer 1, 2, or 3. The integer represents the contestant's initial door choice.}
+}
 \value{
 The function returns an integer 1, 2, or 3. This integer
 represents the goat door that the host opened.
@@ -17,10 +22,10 @@ door at	random (1, 2, or 3) that the host opens to reveal a goat.
 \details{
 If the contestant initially picked a door with a goat, the host must open
 the other goat door. If the contestant initially selected the door with
-the car, the host will randomly select one of the two goat doors.
+the car, the host randomly selects one of the two goat doors.
 }
 \examples{
-g <- create_game()
-p <- select_door()
-open_goat_door(g, p)
+  g <- create_game()
+  p <- select_door()
+  open_goat_door(g, p)
 }
