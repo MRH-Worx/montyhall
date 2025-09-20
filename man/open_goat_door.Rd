@@ -7,7 +7,7 @@
 open_goat_door(game, a.pick)
 }
 \value{
-The function returns an integer that can be 1, 2, or 3. This integer
+The function returns an integer 1, 2, or 3. This integer
 represents the goat door that the host opened.
 }
 \description{
@@ -20,7 +20,7 @@ the other goat door. If the contestant initially selected the door with
 the car, the host will randomly select one of the two goat doors.
 }
 \examples{
-game <- create_game()
-pick <- select_door()
-open_goat_door(game, pick)
+g <- create_game()
+p <- select_door()
+open_goat_door(g, p)
 }
