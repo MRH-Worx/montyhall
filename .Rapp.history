@@ -1,0 +1,144 @@
+install.packages(#
+  c( "devtools", "roxygen2",#
+     "usethis", "testthat",#
+     "knitr" ) )
+# IF NOT ALREADY INSTALLED:#
+pkgs <- c("devtools","purrr","rmarkdown")#
+install.packages(pkgs)#
+#
+wd <- getwd()#
+dir.create("MONTY")#
+#
+#################
+#
+  git.hub.name  <-  # YOUR GITHUB USERNAME #
+#
+################
+## GENERATE PACKAGE REPORT #
+#
+filepath <- paste0( wd, "/MONTY/montyhall-test-", toupper(git.hub.name), ".HTML" )#
+#
+download.file( #
+  url="https://raw.githubusercontent.com/Watts-College/paf-514-template/main/labs/create-r-package-test.rmd",#
+  destfile="./MONTY/create-r-package-test.rmd" )#
+#
+rmarkdown::render( #
+  input = "./MONTY/create-r-package-test.rmd", #
+  output_file = filepath,#
+  params = list( name=git.hub.name ) )#
+#
+# file location#
+filepath#
+#
+# preview file #
+shell( filepath )
+# IF NOT ALREADY INSTALLED:#
+pkgs <- c("devtools","purrr","rmarkdown")#
+install.packages(pkgs)#
+#
+wd <- getwd()#
+dir.create("MONTY")#
+#
+#################
+#
+  git.hub.name  <-  "MRH-Worx" #
+#
+################
+## GENERATE PACKAGE REPORT #
+#
+filepath <- paste0( wd, "/MONTY/montyhall-test-", toupper(git.hub.name), ".HTML" )#
+#
+download.file( #
+  url="https://raw.githubusercontent.com/Watts-College/paf-514-template/main/labs/create-r-package-test.rmd",#
+  destfile="./MONTY/create-r-package-test.rmd" )#
+#
+rmarkdown::render( #
+  input = "./MONTY/create-r-package-test.rmd", #
+  output_file = filepath,#
+  params = list( name=git.hub.name ) )#
+#
+# file location#
+filepath#
+#
+# preview file #
+shell( filepath )
+devtools::run_examples()
+# --- 0) One-time installs (safe to re-run) ---#
+install.packages(c("devtools","purrr","rmarkdown"))#
+#
+# --- 1) Set your GitHub username (IMPORTANT) ---#
+git.hub.name <- "MRH-Worx"   # <-- <-- put YOUR username here (string)#
+#
+# --- 2) Prep a working folder to hold the report ---#
+wd <- getwd()#
+dir.create("MONTY", showWarnings = FALSE, recursive = TRUE)#
+#
+# Use file.path to avoid path typos on macOS#
+filepath <- file.path(wd, "MONTY", paste0("montyhall-test-", toupper(git.hub.name), ".html"))#
+#
+# --- 3) Download the test Rmd into MONTY ---#
+download.file(#
+  url      = "https://raw.githubusercontent.com/Watts-College/paf-514-template/main/labs/create-r-package-test.rmd",#
+  destfile = file.path("MONTY", "create-r-package-test.rmd"),#
+  mode     = "wb"#
+)#
+#
+# --- 4) Render the report (RStudio bundles Pandoc) ---#
+rmarkdown::render(#
+  input       = file.path("MONTY", "create-r-package-test.rmd"),#
+  output_file = basename(filepath),          # name only#
+  output_dir  = dirname(filepath),           # put it in MONTY#
+  params      = list(name = git.hub.name),#
+  envir       = new.env(parent = globalenv()) # clean env for chunks#
+)#
+#
+# --- 5) Show where it is & open it (Mac uses browseURL, not shell) ---#
+filepath#
+browseURL(filepath)
+# IF NOT ALREADY INSTALLED:#
+pkgs <- c("devtools","purrr","rmarkdown")#
+install.packages(pkgs)#
+#
+wd <- getwd()#
+dir.create("MONTY")#
+#
+#################
+#
+  git.hub.name  <-  "MRH-Worx"#
+#
+################
+## GENERATE PACKAGE REPORT #
+#
+filepath <- paste0( wd, "/MONTY/montyhall-test-", toupper(git.hub.name), ".HTML" )#
+#
+download.file( #
+  url="https://raw.githubusercontent.com/Watts-College/paf-514-template/main/labs/create-r-package-test.rmd",#
+  destfile="./MONTY/create-r-package-test.rmd" )#
+#
+rmarkdown::render( #
+  input = "./MONTY/create-r-package-test.rmd", #
+  output_file = filepath,#
+  params = list( name=git.hub.name ) )#
+#
+# file location#
+filepath#
+#
+# preview file #
+shell( filepath )
+setwd("/path/to/montyhall")   # adjust path as needed#
+devtools::document()
+getwd()
+devtools::document()
+devtools::run_examples()
+setwd("/Users/matt/Documents/GitHub/montyhall")  # <-- adjust if different#
+file.exists("DESCRIPTION")                        # should be TRUE#
+devtools::document()#
+devtools::run_examples()
+rm(list = c("change_door","create_game","determine_winner",#
+            "open_goat_door","select_door","play_game","play_n_games"),#
+   envir = .GlobalEnv)
+getwd()
+devtools::document()
+devtools::document()
+getwd()
+devtools::document()
