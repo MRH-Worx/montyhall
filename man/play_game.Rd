@@ -6,6 +6,10 @@
 \usage{
 play_game()
 }
+\value{
+A data frame with the results of the simulated game with strategy ("stay" or "switch")
+and outcome ("WIN" or "LOSE").
+}
 \description{
 This function simulates one game of the Monty Hall Problem.
 }
@@ -13,5 +17,5 @@ This function simulates one game of the Monty Hall Problem.
 A data frame with a strategy row ("stay" or "switch") and an outcome row ("WIN" or "LOSE")
 }
 \examples{
-play_game()
+  play_game()
 }
